@@ -1,5 +1,5 @@
 {
-  "name": "hydraulic-resistance",
+  "name": "hydraulic-resistance-js",
   "version": "1.0.0",
   "description": "Library for calculations of fittings's hydraulic resistance based on \"Handbook of Hydraulic Resistance\" I.E.Idel'chik",
   "main": "index.js",
