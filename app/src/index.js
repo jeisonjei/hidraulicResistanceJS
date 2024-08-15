@@ -1,5 +1,5 @@
-import ElbowRect from "../resistances/ElbowRect";
-import ElbowRound from "../resistances/ElbowRound";
+import {ElbowRect} from "../resistances/ElbowRect";
+import {ElbowRound} from "../resistances/ElbowRound";
 
 import {
     densityAir,
