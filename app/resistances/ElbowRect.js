@@ -1,5 +1,6 @@
 export class ElbowRect{
     static resistance(equivalentRoughnessMillimeters, angleDegrees, rd, lambda, re, widthMillimeters = 0, heightMillimeters = 0, diameterMillimeters = 0) {
+        if (!equivalentRoughnessMillimeters || !angleDegrees || !rd || !lambda || !re) return;
         let dzetam;
         let A;
         let b;
