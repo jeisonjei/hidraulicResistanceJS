@@ -1,8 +1,8 @@
 {
-  "name": "hydraulic-resistance-js",
+  "name": "hydraulic-resistance",
   "version": "1.0.0",
   "description": "Library for calculations of fittings's hydraulic resistance based on \"Handbook of Hydraulic Resistance\" I.E.Idel'chik",
-  "main": "index.js",
+  "main": "dist/hydraulic-resistance.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode=production --node-env=production",
