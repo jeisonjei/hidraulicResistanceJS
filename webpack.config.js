@@ -1,18 +1,29 @@
 // Generated using webpack-cli https://github.com/webpack/webpack-cli
 
 const path = require('path');
+const { library, experiments } = require('webpack');
+
 
 const isProduction = process.env.NODE_ENV == 'production';
 
 
 const stylesHandler = 'style-loader';
 
+const libraryName = 'hydraulic-resistance';
+
 
 
 const config = {
+    experiments: {
+        outputModule: true
+    },
+
     entry: './app/src/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
+        filename: libraryName + '.js',
+        libraryTarget: 'module'
+        
     },
     plugins: [
         // Add your plugins here
