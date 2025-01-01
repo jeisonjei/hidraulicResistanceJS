@@ -16,9 +16,9 @@ export class TeeSupplyRectangular {
         Сопротивление приточного тройника на проход, все ответвления прямоугольного сечения
         */
         let ksi;
-        const areaCollectorPipeSquareMeters = Mathematics.getAreaRectangle(widthCollectorPipeMillimeters, heightCollectorPipeMillimeters);
-        const areaTurnPipeSquareMeters = Mathematics.getAreaRectangle(widthTurnPipeMillimeters, heightTurnPipeMillimeters);
-        const areaPassPipeSquareMeters = Mathematics.getAreaRectangle(widthPassPipeMillimeters, heightPassPipeMillimeters);
+        const areaCollectorPipeSquareMeters = Mathematics.GetAreaRectangle(widthCollectorPipeMillimeters, heightCollectorPipeMillimeters);
+        const areaTurnPipeSquareMeters = Mathematics.GetAreaRectangle(widthTurnPipeMillimeters, heightTurnPipeMillimeters);
+        const areaPassPipeSquareMeters = Mathematics.GetAreaRectangle(widthPassPipeMillimeters, heightPassPipeMillimeters);
 
         ksi = this._getTeeSupplyOnPassResistance(
             flowRateCollectorPipeCubicMetersPerHour,
@@ -32,9 +32,9 @@ export class TeeSupplyRectangular {
 
     static toTurnResistance(flowRateCollectorPipeCubicMetersPerHour, flowRateTurnPipeCubicMetersPerHour, widthCollectorPipeMillimeters, heightCollectorPipeMillimeters, widthTurnPipeMillimeters, heightTurnPipeMillimeters, widthPassPipeMillimeters, heightPassPipeMillimeters, angleDegrees) {
         let ksi;
-        const areaCollectorPipeSquareMeters = Mathematics.getAreaRectangle(widthCollectorPipeMillimeters, heightCollectorPipeMillimeters);
-        const areaTurnPipeSquareMeters = Mathematics.getAreaRectangle(widthTurnPipeMillimeters, heightTurnPipeMillimeters);
-        const areaPassPipeSquareMeters = Mathematics.getAreaRectangle(widthPassPipeMillimeters, heightPassPipeMillimeters);
+        const areaCollectorPipeSquareMeters = Mathematics.GetAreaRectangle(widthCollectorPipeMillimeters, heightCollectorPipeMillimeters);
+        const areaTurnPipeSquareMeters = Mathematics.GetAreaRectangle(widthTurnPipeMillimeters, heightTurnPipeMillimeters);
+        const areaPassPipeSquareMeters = Mathematics.GetAreaRectangle(widthPassPipeMillimeters, heightPassPipeMillimeters);
 
         ksi = this._getTeeSupplyOnTurnResistance(
             flowRateCollectorPipeCubicMetersPerHour,

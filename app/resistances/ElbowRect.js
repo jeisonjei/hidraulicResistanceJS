@@ -1,4 +1,27 @@
+import { hydraulicDiameter, kinViscAir, lambdaKoef, reinolds, velocityRect } from "../helpers/flow";
+
 export class ElbowRect{
+    static Resistance(flowRateCubicMeterPerHour, widthMillimeters, heightMillimeters, equivalentRoughnessMillimeters, angleDegrees, rd) {
+        var widthMeters = widthMillimeters / 1000;
+        var heightMeters = heightMillimeters / 1000;
+        var hydDiamMet = hydraulicDiameter(widthMeters, heightMeters);
+        var hydDiamMil = hydDiamMet * 1000;
+        
+        var tCelsius = 20;
+        var nu = kinViscAir(tCelsius);
+        var velocityMeterPerSecond = velocityRect(widthMillimeters, heightMillimeters, flowRateCubicMeterPerHour);
+        
+        var re = reinolds(velocityMeterPerSecond, hydDiamMet, nu);
+
+        
+        var lambda = lambdaKoef(re, hydDiamMil, equivalentRoughnessMillimeters);
+
+                
+        var resistance = ElbowRect.resistance(equivalentRoughnessMillimeters, angleDegrees, rd, lambda, re, widthMillimeters, heightMillimeters);
+
+                
+        return resistance;
+    }
     static resistance(equivalentRoughnessMillimeters, angleDegrees, rd, lambda, re, widthMillimeters = 0, heightMillimeters = 0, diameterMillimeters = 0) {
         if (!equivalentRoughnessMillimeters || !angleDegrees || !rd || !lambda || !re) return;
         let dzetam;

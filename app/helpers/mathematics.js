@@ -6,10 +6,10 @@ export class Mathematics {
     }
 
     static GetAreaRectangle(widthMillimeters, heightMillimeters) {
-        const width = widthMillimeters;
-        const height = heightMillimeters;
-        const area = width * height;
-        return area; // Returning area in square millimeters
+        const widthMeter = widthMillimeters / 1000;
+        const heightMeter = heightMillimeters / 1000;
+        const areaSquareMeter = widthMeter * heightMeter;
+        return areaSquareMeter; // Returning area in square millimeters
     }
 
     static GetEquivalentDiameter(widthMillimeters, heightMillimeters) {

@@ -26,6 +26,8 @@ export function kinViscWater(t) {
 }
 export function reinolds(v, diameterMet, nu) {
     if (!v || !diameterMet || !nu) return;
+
+        
     return (v * diameterMet) / nu;
 }
 export function lambdaKoef(re, diameterMil, roughness) {
